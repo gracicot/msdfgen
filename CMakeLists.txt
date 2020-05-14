@@ -9,7 +9,7 @@ option(FREETYPE_WITH_HARFBUZZ "Link HarfBuzz because FreeType is configured to r
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-find_package(Freetype REQUIRED)
+find_package(freetype REQUIRED)
 
 #----------------------------------------------------------------
 # Gathering File
@@ -76,7 +76,7 @@ add_library(msdfgen::msdfgen-ext ALIAS msdfgen-ext)
 set_target_properties(msdfgen-ext PROPERTIES
 	PUBLIC_HEADER "${msdfgen-ext_PUBLIC_HEADERS}"
 )
-target_link_libraries(msdfgen-ext PUBLIC msdfgen::msdfgen Freetype::Freetype)
+target_link_libraries(msdfgen-ext PUBLIC msdfgen::msdfgen freetype)
 target_include_directories(msdfgen-ext
 PUBLIC
 	$<INSTALL_INTERFACE:include>

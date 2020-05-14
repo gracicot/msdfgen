@@ -1,6 +1,6 @@
 include(CMakeFindDependencyMacro)
 
-find_dependency(Freetype REQUIRED)
+find_dependency(freetype REQUIRED)
 
 set(MSDFGEN_USE_OPENMP "@MSDFGEN_USE_OPENMP@")
 if(MSDFGEN_USE_OPENMP)
